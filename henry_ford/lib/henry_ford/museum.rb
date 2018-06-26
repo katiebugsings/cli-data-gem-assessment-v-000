@@ -1,4 +1,5 @@
 class Museum
-  # Responsible for Museum objects
+attr_accessor :tilte, :description, :image_url
+
 
 end
