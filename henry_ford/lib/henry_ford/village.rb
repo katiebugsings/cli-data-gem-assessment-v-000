@@ -1,6 +1,6 @@
 class Village
 
-  attr_accessor :description, :restaurants, :menus
+  attr_accessor :description, :restaurants
 
   def initialize(description)
     self.restaurants = []
