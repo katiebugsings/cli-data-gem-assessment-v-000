@@ -1,10 +1,10 @@
 class Village
 
-  attr_accessor :description, :restaurants
+  attr_accessor :restaurants
 
-  def initialize(description)
+  def initialize(restaurants)
     self.restaurants = []
-    @description = description
+    @restaurants = restaurants
   end
 
   def self.all
