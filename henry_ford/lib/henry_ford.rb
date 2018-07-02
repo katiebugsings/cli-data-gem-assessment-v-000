@@ -6,7 +6,6 @@ module HenryFord
 end
 
 require_relative "./henry_ford/cli"
-require_relative "./henry_ford/museum"
 require_relative "./henry_ford/scraper"
 require_relative "./henry_ford/village"
 require_relative "./henry_ford/version"
