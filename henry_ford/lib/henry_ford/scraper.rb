@@ -24,9 +24,11 @@ def self.scrape_menu(menu_url)
     link = link.attribute("href").value
 
   if link.include?("https://www.thehenryford.org/docs/default-source/default-document-library/eagle-tavern-spring-menu-2017.pdf?sfvrsn=2")
-    restaurant_hash[:https://www.thehenryford.org/docs/default-source/default-document-library/eagle-tavern-spring-menu-2017.pdf?sfvrsn=2] = https://www.thehenryford.org/docs/default-source/default-document-library/eagle-tavern-spring-menu-2017.pdf?sfvrsn=2
+    restaurant_hash[link] = https://www.thehenryford.org/docs/default-source/default-document-library/eagle-tavern-spring-menu-2017.pdf?sfvrsn=2
   elsif link.include?("https://www.thehenryford.org/docs/default-source/default-document-library/789--cotswold-tea-menu-2.pdf?sfvrsn=2")
-    restaurant_hash[:https://www.thehenryford.org/docs/default-source/default-document-library/789--cotswold-tea-menu-2.pdf?sfvrsn=2] = link
+    restaurant_hash[link] = :https://www.thehenryford.org/docs/default-source/default-document-library/789--cotswold-tea-menu-2.pdf?sfvrsn=2
+  elsif link.include?(https://www.thehenryford.org/docs/default-source/default-document-library/mrs-fishers-menu-2018.pdf?sfvrsn=ae7f3801_2)
+    restaurant_hash[link] = https://www.thehenryford.org/docs/default-source/default-document-library/mrs-fishers-menu-2018.pdf?sfvrsn=ae7f3801_2
     end
   end
 end
