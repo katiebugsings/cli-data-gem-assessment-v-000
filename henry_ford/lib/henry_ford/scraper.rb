@@ -13,6 +13,7 @@ index_url.delete!("\u0000")
     restaurant_name = restaurant.css("restaurant-name").text
 
     restaurant_menu = restaurant.css("a").attribute("href").value
+    binding.pry
     scraped_restaurants << {name: restaurant_name, menu: restaurant_menu}
   end
   scraped_restaurants
