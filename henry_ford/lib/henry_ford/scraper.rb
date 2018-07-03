@@ -4,14 +4,18 @@ require 'pry'
 class Scraper
 
 def self.scrape_index_page(index_url)
+index_url.delete!("\u0000")
   doc = Nokogiri::HTML(open(index_url))
 
   scraped_restaurants = []
-  doc.css("restaurant").each do |restaurant|
+  binding.pry
+  doc.css(".restaurant").each do |restaurant|
+    binding.pry
     #restaurant_hash = {}
     restaurant_name = restaurant.css("restaurant-name").text
-binding.pry
+
     restaurant_menu = restaurant.css("a").attribute("href").value
+    binding.pry
     scraped_restaurants << {name: restaurant_name, menu: restaurant_menu}
   end
   scraped_restaurants
