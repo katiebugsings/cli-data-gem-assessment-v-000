@@ -11,7 +11,7 @@ def self.scrape_index_page(index_url)
   doc.css("restaurant").each do |restaurant|
     #restaurant_hash = {}
     restaurant_name = restaurant.css("restaurant-name").text
-binding.pry
+
     restaurant_menu = restaurant.css("a").attribute("href").value
     scraped_restaurants << {name: restaurant_name, menu: restaurant_menu}
   end
