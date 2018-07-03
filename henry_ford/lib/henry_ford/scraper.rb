@@ -9,7 +9,7 @@ index_url.delete!("\u0000")
 
   scraped_restaurants = []
   binding.pry
-  doc.css("restaurant").each do |restaurant|
+  doc.css(".restaurant").each do |restaurant|
     binding.pry
     #restaurant_hash = {}
     restaurant_name = restaurant.css("restaurant-name").text
